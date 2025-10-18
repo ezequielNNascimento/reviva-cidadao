@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import Button from '@/components/ui/button/Button.vue';
+import AppFooter from './components/layout/AppFooter.vue';
+import AppHeader from './components/layout/AppHeader.vue';
+
+
 
 </script>
 
 <template>
-  <h1>You did it!</h1>
-  <Button>Click me</Button>
+  <AppHeader/>
+  <router-view/>
+  <AppFooter/>
 </template>
 
 <style scoped></style>
