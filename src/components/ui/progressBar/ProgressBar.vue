@@ -12,7 +12,7 @@ const colorMap = {
   blue: 'bg-blue-600',
 }
 
-const bgColor = colorMap[props.color] || 'bg-blue-600'
+const bgColor = 'bg-blue-600'
 </script>
 
 <template>

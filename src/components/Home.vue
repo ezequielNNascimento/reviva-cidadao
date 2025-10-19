@@ -69,9 +69,11 @@ import {
         </Button>
 
 
-        <Button class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">
-          <Map class="w-5 h-5" />
-          Mapa de Calor
+        <Button as-child class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">
+          <RouterLink to="/MapaCalor">
+            <Map class="w-5 h-5" />
+            Mapa de Calor
+          </RouterLink>
         </Button>
 
         <Button class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">

@@ -6,6 +6,7 @@ import CriarDenuncia from "@/views/CriarDenuncia.vue"
 import TrabalhoVoluntario from "@/views/TrabalhoVoluntario.vue"
 import Perfil from "@/views/Perfil.vue"
 import Eventos from "@/views/Eventos.vue"
+import MapaCalor from "@/views/MapaCalor.vue"
 
 
 const routes = [
@@ -20,7 +21,9 @@ const routes = [
   path: '/ScanQRCode',
   name: 'ScanQRCode',
   component: () => import('@/views/ScanQRCode.vue'),
-}
+
+},
+{ path: "/MapaCalor", component: MapaCalor },
 
 ]
 
