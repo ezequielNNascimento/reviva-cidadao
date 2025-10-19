@@ -129,6 +129,7 @@ function saveFile() {
         >
           Escolher arquivo
         </label>
+        <p class="text-sm text-gray-500">Máximo de 10Mb</p>
         <input
           id="file-upload"
           type="file"

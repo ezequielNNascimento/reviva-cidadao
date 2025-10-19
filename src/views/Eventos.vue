@@ -1,9 +1,9 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import Breadcrumb from '@/components/layout/Breadcrumb.vue'
-import { Button } from '@/components/ui/button'
-import { toast } from 'vue-sonner'
+
 
 interface VolunteerEvent {
   id: string;
@@ -16,57 +16,34 @@ interface VolunteerEvent {
 
 const events = ref<VolunteerEvent[]>([
   {
-    id: 'item-3',
-    title: 'Mutirão de limpeza orla do Rio Madeira I',
-    dateTime: '20/10/2025, 10:00',
+    id: 'item-1',
+    title: 'Mutirão de limpeza na orla do Rio Madeira em conjunto com a população',
+    dateTime: '21/10/2025 - 21/10/2025, 11:00',
     address: 'Avenida Sete de Setembro',
     description: 'Mutirão para recolhimento de lixo na orla.',
-    isParticipating: true,
+    isParticipating: false,
   },
   {
     id: 'item-2',
-    title: 'Mutirão de limpeza orla do Rio Madeira II',
-    dateTime: '20/10/2025, 11:30',
-    address: 'Avenida Jorge Teixeira',
-    description: 'Junte-se a nós para deixar a orla mais limpa!',
+    title: 'Mutirão de limpeza no Parque Natural de Porto Velho',
+    dateTime: '20/10/2025 - 20/10/2025, 10:30',
+    address: 'Avenida Rio Madeira',
+    description: 'No dia 20 de outubro, será realizado um mutirão de limpeza no Parque Natural, em comemoração ao Dia Mundial de Limpeza de Rios e Praias. Este evento, que ocorre em mais de 180 países, tem como objetivo promover atividades de preservação da natureza. A ação será destaque no site da Secretaria Municipal de Meio Ambiente de Porto Velho, que convida todos a participarem dessa importante iniciativa de conscientização ambiental.',
     isParticipating: false,
   },
   {
-    id: 'item-1',
-    title: 'Mutirão de limpeza orla do Rio Madeira III',
-    dateTime: '21/10/2025, 11:45',
-    address: 'Avenida Rio de Janeiro',
-    description: 'Recolhimento de lixo na área da Estrada de Ferro Madeira Mamoré.',
-    isParticipating: false,
+    id: 'item-3',
+    title: 'Plantio florestal nas avenidas principais de Porto Velho',
+    dateTime: '20/11/2025 - 20/11/2025, 10:15',
+    address: 'Avenida Rio de janeiro',
+    description: 'O Município de Porto Velho, vai promover um evento para conscientizar e estimular a população na preservação ambiental. A ação, que faz parte do Projeto Plantar o Futuro e Cultivar a Vida, tem como objetivo criar um corredor ecológico no Município por meio do reflorestamento de uma área de 28 hectares. A Confederação Nacional de Municípios (CNM) incentivou a ação e a adesão do Município a outro projeto, o Virada Ambiental, que também incentiva o plantio de árvores',
+    isParticipating: true,
   },
 ])
 
-function promptParticipation(event: VolunteerEvent) {
-  toast.info(`Participar no evento "${event.title}"?`, {
-    action: {
-      label: 'Confirmar',
-      onClick: () => {
-        const eventToUpdate = events.value.find(e => e.id === event.id)
-        if (eventToUpdate) {
-          eventToUpdate.isParticipating = true
-        }
-        toast.success('Inscrição confirmada!', {
-          description: `Obrigado por se juntar a nós em "${event.title}".`,
-        })
-      },
-    },
-    cancel: {
-      label: 'Cancelar',
-      onClick: () => {
-        toast.info('Ação cancelada.')
-      }
-    },
-    duration: 10000,
-  })
-}
 const breadcrumbItems = [
   { name: 'Início', href: '/home' },
-  { name: 'Trabalho Voluntario' }
+  { name: 'Eventos' }
 ]
 const address = ref('')
 function getLocation() {
@@ -106,19 +83,7 @@ onMounted(() => {
               <span class="text-sm text-gray-500 mt-1">{{ event.dateTime }}</span>
             </div>
           </AccordionTrigger>
-          <div class="ml-4 flex-shrink-0">
-            <Button
-              v-if="!event.isParticipating"
-              @click="promptParticipation(event)"
-              variant="default"
-              class="bg-green-600 hover:bg-green-700"
-            >
-              Participar
-            </Button>
-            <Button v-else  class="bg-blue-700">
-              Participando
-            </Button>
-          </div>
+
         </div>
         <AccordionContent class="p-2 md:p-3 text-gray-700">
           <p class="mb-1"><span class="font-semibold">Endereço:</span> {{ event.address }}</p>

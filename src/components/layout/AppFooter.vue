@@ -17,20 +17,24 @@ import Button from '../ui/button/Button.vue'
     </Button>
 </router-link>
     <!-- Denúncia -->
+     <router-link to="/CriarDenuncia">
     <Button
       class="flex flex-col items-center justify-center text-xs text-blue-700 hover:!bg-gray-200 bg-transparent"
     >
       <Megaphone class="w-6 h-6" />
       <span>Denúncia</span>
     </Button>
+    </router-link>
 
     <!-- QR Code -->
-    <Button
-      class="flex flex-col items-center justify-center text-xs text-blue-700 hover:!bg-gray-200 bg-transparent"
-    >
-      <QrCode class="w-6 h-6" />
-      <span>QR Code</span>
-    </Button>
+    <router-link to="/ScanQRCode">
+      <Button
+        class="flex flex-col items-center justify-center text-xs text-blue-700 hover:!bg-gray-200 bg-transparent"
+      >
+        <QrCode class="w-6 h-6" />
+        <span>QR Code</span>
+      </Button>
+    </router-link>
   </footer>
 </template>
 

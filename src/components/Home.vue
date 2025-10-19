@@ -60,10 +60,13 @@ import {
           </RouterLink>
         </Button>
 
-        <Button class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">
-          <CalendarDays class="w-5 h-5" />
-          Eventos
+       <Button as-child class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">
+          <RouterLink to="/Eventos">
+            <CalendarDays class="w-5 h-5" />
+            Eventos
+          </RouterLink>
         </Button>
+
 
         <Button class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">
           <Map class="w-5 h-5" />
