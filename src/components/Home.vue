@@ -17,7 +17,7 @@ import {
 </script>
 
 <template>
-  <section class="bg-gray-100 min-h-screen w-full flex flex-col items-center py-5">
+  <section class="bg-gray-100 w-full flex flex-col items-center py-5">
     <div class="bg-gradient-to-r from-blue-800 to-blue-900 text-white p-6 w-full max-w-md mx-auto shadow-lg">
       <h1 class="text-xl font-bold">
         Olá, <span class="underline decoration-blue-400">USUÁRIO</span>
@@ -38,39 +38,39 @@ import {
     <div class="mt-6 w-full max-w-md mx-auto">
       <h2 class="text-lg font-bold text-blue-900 mb-3 px-2">Atividades</h2>
 
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col ">
 
-        <Button as-child class="flex items-center justify-start gap-3 bg-white text-black hover:bg-gray-200">
+        <Button as-child class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">
           <RouterLink to="/Perfil">
             <User class="w-5 h-5" />
             Minha Conta
           </RouterLink>
         </Button>
-        <Button as-child class="flex items-center justify-start gap-3 bg-white text-black hover:bg-gray-200">
+        <Button as-child class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">
           <router-link to="/Denuncia">
             <Megaphone class="w-5 h-5" />
             Denúncias
           </router-link>
         </Button>
 
-        <Button as-child class="flex items-center justify-start gap-3 bg-white text-black hover:bg-gray-200">
+        <Button as-child class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">
           <RouterLink to="/TrabalhoVoluntario">
             <Sprout class="w-5 h-5" />
             Trabalho Voluntário
           </RouterLink>
         </Button>
 
-        <Button class="flex items-center justify-start gap-3 bg-white text-black hover:bg-gray-200">
+        <Button class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">
           <CalendarDays class="w-5 h-5" />
           Eventos
         </Button>
 
-        <Button class="flex items-center justify-start gap-3 bg-white text-black hover:bg-gray-200">
+        <Button class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">
           <Map class="w-5 h-5" />
           Mapa de Calor
         </Button>
 
-        <Button class="flex items-center justify-start gap-3 bg-white text-black hover:bg-gray-200">
+        <Button class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">
           <HelpCircle class="w-5 h-5" />
           Como usar o Aplicativo
         </Button>

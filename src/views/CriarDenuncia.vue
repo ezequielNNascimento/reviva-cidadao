@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import Breadcrumb from '@/components/layout/Breadcrumb.vue';
 import { onMounted, ref, computed } from 'vue';
@@ -13,7 +14,6 @@ import {
 import { Textarea } from '@/components/ui/textarea';
 import Label from '@/components/ui/label/Label.vue';
 import { Button } from '@/components/ui/button';
-// 1. Importar a função toast do vue-sonner
 import { toast } from 'vue-sonner';
 
 const address = ref('');
@@ -47,7 +47,6 @@ function getLocation() {
 
 onMounted(() => getLocation());
 
-// Funções do upload
 function handleFileChange(event: Event) {
   const file = (event.target as HTMLInputElement).files?.[0];
   if (file) {
@@ -56,7 +55,6 @@ function handleFileChange(event: Event) {
   }
 }
 
-// 2. Modificar a função cancelFile para mostrar uma notificação
 function cancelFile() {
   if (selectedFile.value) {
     toast.info('Upload de imagem cancelado.');
@@ -65,22 +63,18 @@ function cancelFile() {
   previewUrl.value = null;
 }
 
-// Computed para validação do formulário
 const isFormValid = computed(() => {
   return category.value !== '' && description.value.trim() !== '' && selectedFile.value !== null;
 });
 
-// 3. Modificar a função saveFile para usar o toast em vez do alert()
 function saveFile() {
   if (!isFormValid.value) return;
 
-  // Mostra uma notificação de sucesso!
   toast.success('Denúncia enviada com sucesso!', {
-    description: `A sua denúncia sobre "${category.value}" foi registada.`
+    description: `A sua denúncia sobre "${category.value}" foi registrada.`
   });
 
-  // Limpa o formulário após o sucesso
-  cancelFile(); // A função cancelFile já limpa os campos de ficheiro
+  cancelFile();
   category.value = '';
   description.value = '';
 }
@@ -89,6 +83,7 @@ function saveFile() {
 <template>
   <div class="p-6 max-w-7xl mx-auto space-y-8 overflow-auto">
     <Breadcrumb :items="breadcrumbItems" />
+
     <div class="bg-white rounded-lg shadow p-10 space-y-6">
       <div>
         <Label class="mb-2">Categoria:</Label>
@@ -108,7 +103,10 @@ function saveFile() {
         </Select>
       </div>
 
-      <p class="text-gray-700"><span class="font-semibold">Endereço:</span> {{ address || "Buscando localização..." }}</p>
+      <p class="text-gray-700">
+        <span class="font-semibold">Endereço:</span>
+        Av. Calama, 4985 - Flodoaldo Pontes Pinto, Porto Velho - RO, 76820-441
+      </p>
 
       <div class="grid w-full gap-1.5">
         <Label for="description">Descrição:</Label>
@@ -123,29 +121,39 @@ function saveFile() {
 
       <div class="grid w-full gap-2">
         <Label>Foto:</Label>
+
+        <!-- Input customizado: remove o texto "Nenhum arquivo escolhido" -->
+        <label
+          for="file-upload"
+          class="inline-block bg-[#2062A9] text-white text-sm font-semibold py-2 px-4 rounded cursor-pointer hover:bg-blue-700 text-center w-full sm:w-auto"
+        >
+          Escolher arquivo
+        </label>
         <input
+          id="file-upload"
           type="file"
           accept="image/*"
           capture="environment"
           @change="handleFileChange"
-          class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-[#2062A9] file:text-white hover:file:bg-blue-700 cursor-pointer"
+          class="hidden"
         />
 
-        <div v-if="previewUrl" class="relative mt-2 border rounded p-2 max-h-[40vh] overflow-auto">
-          <img :src="previewUrl" alt="Preview" class="w-full h-auto max-h-96 object-contain rounded" />
-        </div>
+        <p v-if="selectedFile" class="text-sm text-gray-600">
+          📷 {{ selectedFile.name }}
+        </p>
+
         <div class="flex justify-end gap-2 mt-2">
-            <Button variant="destructive" @click="cancelFile">
-              Cancelar
-            </Button>
-            <Button
-              variant="default"
-              :disabled="!isFormValid"
-              @click="saveFile"
-            >
-              Salvar
-            </Button>
-          </div>
+          <Button variant="destructive" @click="cancelFile">
+            Cancelar
+          </Button>
+          <Button
+            variant="default"
+            :disabled="!isFormValid"
+            @click="saveFile"
+          >
+            Salvar
+          </Button>
+        </div>
       </div>
     </div>
   </div>

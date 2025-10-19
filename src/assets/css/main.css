@@ -136,7 +136,16 @@
     @apply border-border outline-ring/50;
   }
 
-  body {
-    @apply bg-background text-foreground;
-  }
+main {
+    min-height: 32dvh;
+}
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Evita scroll duplo */
+  @apply bg-background text-foreground;
+}
+
 }

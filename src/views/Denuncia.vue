@@ -51,7 +51,7 @@ const breadcrumbItems = [
 </script>
 
 <template>
-  <div class="p-4">
+  <div class="p-4 h-[100vh] overflow-y-auto">
     <Breadcrumb class="mb-3" :items="breadcrumbItems" />
      <div class="flex justify-end mb-4">
       <RouterLink to="CriarDenuncia">
@@ -77,6 +77,7 @@ const breadcrumbItems = [
       </AccordionContent>
       <AccordionContent class="p-2 md:p-3 text-gray-700">
         <p class="font-bold">Foto:</p>
+        <p class="text-blue-700">Foto de vala a ceu aberto.png</p>
       </AccordionContent>
     </AccordionItem>
   </Accordion>
@@ -96,6 +97,7 @@ const breadcrumbItems = [
       </AccordionContent>
       <AccordionContent class="p-2 md:p-3 text-gray-700">
         <p class="font-bold">Foto:</p>
+        <p class="text-blue-700">Foto do bueiro entupido.png</p>
       </AccordionContent>
     </AccordionItem>
   </Accordion>
@@ -115,6 +117,7 @@ const breadcrumbItems = [
       </AccordionContent>
       <AccordionContent class="p-2 md:p-3 text-gray-700">
         <p class="font-bold">Foto:</p>
+        <p class="text-blue-700">Foto_do_alagamento.png</p>
       </AccordionContent>
     </AccordionItem>
   </Accordion>
