@@ -15,29 +15,55 @@ interface VolunteerEvent {
 }
 
 const events = ref<VolunteerEvent[]>([
+
   {
-    id: 'item-1',
-    title: 'Mutirão de limpeza na orla do Rio Madeira em conjunto com a população',
-    dateTime: '21/10/2025 - 21/10/2025, 11:00',
-    address: 'Avenida Sete de Setembro',
-    description: 'Mutirão para recolhimento de lixo na orla.',
-    isParticipating: false,
+    id: 'item-3',
+    title: 'Plantio florestal nas avenidas principais de Porto Velho',
+    dateTime: '22/11/2025 - 22/11/2025, 10:15',
+    address: 'Avenida Rio de janeiro',
+    description: 'O Município de Porto Velho, vai promover um evento para conscientizar e estimular a população na preservação ambiental. A ação, que faz parte do Projeto Plantar o Futuro e Cultivar a Vida, tem como objetivo criar um corredor ecológico no Município por meio do reflorestamento de uma área de 28 hectares. A Confederação Nacional de Municípios (CNM) incentivou a ação e a adesão do Município a outro projeto, o Virada Ambiental, que também incentiva o plantio de árvores',
+    isParticipating: true,
   },
   {
     id: 'item-2',
     title: 'Mutirão de limpeza no Parque Natural de Porto Velho',
-    dateTime: '20/10/2025 - 20/10/2025, 10:30',
+    dateTime: '21/10/2025 - 21/10/2025, 10:30',
     address: 'Avenida Rio Madeira',
     description: 'No dia 20 de outubro, será realizado um mutirão de limpeza no Parque Natural, em comemoração ao Dia Mundial de Limpeza de Rios e Praias. Este evento, que ocorre em mais de 180 países, tem como objetivo promover atividades de preservação da natureza. A ação será destaque no site da Secretaria Municipal de Meio Ambiente de Porto Velho, que convida todos a participarem dessa importante iniciativa de conscientização ambiental.',
     isParticipating: false,
   },
   {
-    id: 'item-3',
-    title: 'Plantio florestal nas avenidas principais de Porto Velho',
-    dateTime: '20/11/2025 - 20/11/2025, 10:15',
-    address: 'Avenida Rio de janeiro',
-    description: 'O Município de Porto Velho, vai promover um evento para conscientizar e estimular a população na preservação ambiental. A ação, que faz parte do Projeto Plantar o Futuro e Cultivar a Vida, tem como objetivo criar um corredor ecológico no Município por meio do reflorestamento de uma área de 28 hectares. A Confederação Nacional de Municípios (CNM) incentivou a ação e a adesão do Município a outro projeto, o Virada Ambiental, que também incentiva o plantio de árvores',
+    id: 'item-1',
+    title: 'Mutirão de limpeza na orla do Rio Madeira em conjunto com a população',
+    dateTime: '20/10/2025 - 20/10/2025, 11:00',
+    address: 'Avenida Sete de Setembro',
+    description: 'Mutirão para recolhimento de lixo na orla.',
+    isParticipating: false,
+  },
+
+    {
+    id: 'item-4',
+    title: 'Mutirão de limpeza orla do Rio Madeira',
+    dateTime: '18/10/2025 - 18/10/2025, 10:00',
+    address: 'Avenida Sete de Setembro',
+    description: 'Mutirão para recolhimento de lixo na orla.',
     isParticipating: true,
+  },
+  {
+    id: 'item-5',
+    title: 'Mutirão de limpeza orla do Rio Madeira',
+    dateTime: '17/10/2025 - 17/10/2025, 11:30',
+    address: 'Avenida Jorge Teixeira',
+    description: 'Junte-se a nós para deixar a orla mais limpa!',
+    isParticipating: false,
+  },
+  {
+    id: 'item-6',
+    title: 'Mutirão de limpeza orla do Rio Madeira',
+    dateTime: '16/10/2025 - 16/10/2025, 11:45',
+    address: 'Avenida Rio de Janeiro',
+    description: 'Recolhimento de lixo na área da Estrada de Ferro Madeira Mamoré.',
+    isParticipating: false,
   },
 ])
 

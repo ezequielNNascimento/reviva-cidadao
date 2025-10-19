@@ -20,7 +20,7 @@ import {
   <section class="bg-gray-100 w-full flex flex-col items-center py-5">
     <div class="bg-gradient-to-r from-blue-800 to-blue-900 text-white p-6 w-full max-w-md mx-auto shadow-lg">
       <h1 class="text-xl font-bold">
-        Olá, <span class="underline decoration-blue-400">USUÁRIO</span>
+        Olá, <span class="underline decoration-blue-400">CIDADÃO</span>
       </h1>
       <p class="mt-2 text-sm">
         Seu selo de contribuição é:
@@ -33,12 +33,13 @@ import {
         <ProgressBar color="amber" />
         <ProgressBar color="blue" />
       </div>
+      <p class="flex text-sm pt-1 justify-end">240 Pontos</p>
     </div>
 
     <div class="mt-6 w-full max-w-md mx-auto">
       <h2 class="text-lg font-bold text-blue-900 mb-3 px-2">Atividades</h2>
 
-      <div class="flex flex-col ">
+      <div class="flex flex-col">
 
         <Button as-child class="flex items-center justify-start rounded-none border-b border-b-gray-300 bg-white text-black hover:bg-gray-200">
           <RouterLink to="/Perfil">

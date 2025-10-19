@@ -1,18 +1,20 @@
 <script setup lang="ts">
 import { Bell } from "lucide-vue-next"
 import logo from "@/assets/images/logo.png"
-import Button from "../ui/button/Button.vue";
+import Button from "../ui/button/Button.vue"
 </script>
 
 <template>
   <header class="flex items-center justify-between bg-white shadow-sm px-6 py-3 border-b border-gray-200">
     <!-- Logo -->
     <div class="flex items-center gap-3">
-      <img
-        :src="logo"
-        alt="Logo"
-        class="h-12 w-auto object-contain"
-      />
+      <RouterLink to="/home">
+        <img
+          :src="logo"
+          alt="Logo"
+          class="h-12 w-auto object-contain cursor-pointer hover:opacity-80 transition-opacity duration-200"
+        />
+      </RouterLink>
     </div>
 
     <!-- Ícones à direita -->

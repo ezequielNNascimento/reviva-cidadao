@@ -35,9 +35,9 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <section class="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+  <section class="flex flex-col items-center justify-center h-full bg-gray-100 p-4">
     <h1 class="text-lg font-bold text-blue-800 mb-4">Leitor de QR Code</h1>
-    <video ref="videoEl" class="w-full max-w-sm rounded-lg shadow-md bg-black"></video>
+    <video ref="videoEl" class="w-full h-full max-w-sm rounded-lg shadow-md bg-black"></video>
 
     <p v-if="result" class="mt-4 text-green-700 font-semibold">
       Resultado: {{ result }}
