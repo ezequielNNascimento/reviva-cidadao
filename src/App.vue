@@ -9,7 +9,7 @@ import AppHeader from './components/layout/AppHeader.vue';
 <template>
   <AppHeader/>
   <router-view/>
-  <AppFooter/>
+<AppFooter v-if="$route.path !== '/'" />
 </template>
 
 <style scoped></style>

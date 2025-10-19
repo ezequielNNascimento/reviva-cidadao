@@ -18,7 +18,7 @@ import {
 
 <template>
   <section class="bg-gray-100 min-h-screen w-full flex flex-col items-center py-5">
-    <div class="bg-gradient-to-r from-blue-800 to-blue-900 text-white p-6 rounded-lg w-full max-w-md mx-auto shadow-lg">
+    <div class="bg-gradient-to-r from-blue-800 to-blue-900 text-white p-6 w-full max-w-md mx-auto shadow-lg">
       <h1 class="text-xl font-bold">
         Olá, <span class="underline decoration-blue-400">USUÁRIO</span>
       </h1>

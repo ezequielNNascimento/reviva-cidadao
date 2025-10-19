@@ -11,25 +11,36 @@ function fakeLogin() {
 </script>
 
 <template>
-  <section class="flex flex-col items-center justify-between min-h-screen bg-gray-100 py-10 px-4">
-    <!-- Card central -->
-    <div class="bg-white rounded-xl shadow-md p-8 w-full max-w-sm flex flex-col items-center space-y-10">
-      <!-- Logo do programa -->
-      <img :src="logo" alt="Logo ReViva Porto Velho" class="w-48 h-auto" />
+  <section
+    class="flex flex-col items-center justify-between min-h-[90dvh] bg-gray-100 px-4 py-6"
+  >
+    <!-- Card central com grid -->
+    <div
+      class="bg-white rounded-xl shadow-md p-6 w-full max-w-sm grid grid-rows-[70%_15%_15%] items-center justify-items-center"
+      style="height: 70vh;"
+    >
+      <!-- Logo -->
+      <img :src="logo" alt="Logo ReViva Porto Velho" class="w-full h-auto row-span-1" />
 
-      <!-- Texto explicativo -->
-      <p class="text-sm text-center text-gray-700">
+      <!-- Texto -->
+      <p class="text-sm text-center text-gray-700 leading-relaxed row-span-1">
         Acesse suas informações, consulte seu benefício ou cadastre-se para fazer parte do programa.
       </p>
 
+      <!-- Botão -->
       <Button
-      class="w-full max-w-sm bg-blue-600 text-white hover:bg-blue-700"
-      @click="fakeLogin"
-    >
-      Entrar com <span class="font-bold ml-1">gov.br</span>
-    </Button>
+        class="w-full bg-blue-600 text-white hover:bg-blue-700 row-span-1"
+        @click="fakeLogin"
+      >
+        Entrar com <span class="font-bold ml-1">gov.br</span>
+      </Button>
     </div>
 
-    <img :src="logoPrefeitura" alt="Prefeitura de Porto Velho" class="w-32 mt-6" />
+    <!-- Logo da prefeitura -->
+    <img
+      :src="logoPrefeitura"
+      alt="Prefeitura de Porto Velho"
+      class="w-28 mt-6"
+    />
   </section>
 </template>
